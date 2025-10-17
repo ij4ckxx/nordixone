@@ -65,16 +65,16 @@
   font-display: swap;
 }
 
+
 :root {
   --druk: "Druk", sans-serif;
-  
+
   --nor-primary: #13afe3;
   --nor-secondary: #0a1624;
   --nor-light: #f8f8f9;
   --nor-dark: #001d23;
-  --nor-white: #ffffff;
-}
 
+}
 
 
 /* @tailwind css start */
@@ -83,12 +83,12 @@
   --font-poppins: var(--font-poppins);
   --font-inter: var(--font-inter);
 
-
   --color-nor-primary: var(--nor-primary);
   --color-nor-secondary: var(--nor-secondary);
   --color-nor-light: var(--nor-light);
   --color-nor-dark: var(--nor-dark);
   --color-nor-white: var(--nor-white);
+
 }
 
 

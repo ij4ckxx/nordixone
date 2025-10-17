@@ -25,24 +25,6 @@ const serviceLink = {
   ],
 };
 
-/*
-OUR LOCATIONS
-
-INDIA – Chennai Business Office
-No: 764, Anna Salai,
-Nandanam,
-Chennai-600035, Tamil Nadu.
-📞 +91 90878 69016
-✉️ info@nordixone.com
-
-INDIA – Chennai Regd Office
-No: 472, Anna Salai,
-Nandanam,
-Chennai-600035, Tamil Nadu.
-📞 +91 98410 07060
-✉️ info@nordixone.com
-*/
-
 const Footer = () => {
   return (
     <footer className="font-poppins p-[60px_5vw] bg-black text-white">
@@ -51,6 +33,7 @@ const Footer = () => {
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-2">
           <div className="flex flex-col gap-5 justify-between basis-full md:basis-1/3">
             <Image
+            className="w-[100px] h-[65px]"
               src={nordixoneLogo}
               width={100}
               height={65}
@@ -63,7 +46,7 @@ const Footer = () => {
           </div>
           <div className="md:basis-2/3 basis-full flex flex-row justify-between md:justify-start md:gap-[5rem] lg:gap-[8rem] gap-5">
             <div className="flex flex-col gap-4">
-              <div className="text-nor-primary uppercase text-[1.375rem] font-medium tracking-[0px]">
+              <div className="text-nor-primary font-druk uppercase text-[1.375rem] font-medium tracking-[0px]">
                 {companyLink?.title}
               </div>
               <div className="flex flex-col gap-1">
@@ -79,7 +62,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4">
-              <div className="text-nor-primary uppercase text-[1.375rem] font-medium tracking-[0px]">
+              <div className="text-nor-primary font-druk uppercase text-[1.375rem] font-medium tracking-[0px]">
                 {serviceLink?.title}
               </div>
               <div className="flex flex-col gap-1">
@@ -100,7 +83,7 @@ const Footer = () => {
         <div className="flex flex-col-reverse sm:flex-col md:flex-row md:items-start gap-8 md:gap-2">
           <div className="flex flex-col gap-5  basis-full md:basis-1/3">
             <div className="flex flex-col w-max">
-              <div className="text-nor-primary uppercase text-[1.375rem] font-medium 1tracking-[1px]">
+              <div className="text-nor-primary uppercase text-[1.375rem] font-druk font-medium 1tracking-[1px]">
                 FOLLOW OUR WORK
               </div>
               <div className="flex flex-row items-center justify-between gap-1 mt-4 md:mt-5">
@@ -135,7 +118,7 @@ const Footer = () => {
           </div>
           <div className="md:basis-2/3 basis-full flex flex-row">
             <div className="flex flex-col gap-4 w-full md:w-auto">
-              <div className="text-nor-primary uppercase text-[1.375rem] font-medium tracking-[0px]">
+              <div className="text-nor-primary uppercase text-[1.375rem] font-druk font-medium tracking-[0px]">
                 OUR LOCATIONS
               </div>
               <div className="flex flex-col gap-8  sm:flex-row sm:justify-start  sm:gap-[5rem] lg:gap-[8rem]">

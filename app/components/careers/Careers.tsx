@@ -2,15 +2,15 @@
 import { useRef, useEffect, useState } from "react";
 
 const roles = [
-  { id: "developer", label: "Developer", content: "Developer role content goes here.", openings: "1", experience: "" },
-  { id: "designer", label: "Designer", content: "Designer role content goes here.", openings: "1", experience: "" },
-  { id: "manager", label: "Manager", content: "Manager role content goes here.", openings: "1", experience: ""  },
-  { id: "coder", label: "Developer", content: "Developer role content goes here.", openings: "1", experience: ""  },
-  { id: "fom", label: "Designer", content: "Designer role content goes here.", openings: "1", experience: ""  },
-  { id: "feff", label: "Manager", content: "Manager role content goes here.", openings: "1", experience: ""  },
-  { id: "sasd", label: "Developer", content: "Developer role content goes here.", openings: "1", experience: ""  },
-  { id: "rer", label: "Designer", content: "Designer role content goes here.", openings: "1", experience: ""  },
-  { id: "resi", label: "Manager", content: "Manager role content goes here.", openings: "1", experience: ""  },
+  { id: "developer", label: "Developer", content: "Developer role content goes here.", openings: "1", experience: "5 to 10" },
+  { id: "designer", label: "Designer", content: "Designer role content goes here.", openings: "3", experience: "5 to 7" },
+  { id: "manager", label: "Manager", content: "Manager role content goes here.", openings: "2", experience: "2 to 4"  },
+  { id: "coder", label: "Developer", content: "Developer role content goes here.", openings: "5", experience: "5 to 8"  },
+  { id: "fom", label: "Designer", content: "Designer role content goes here.", openings: "2", experience: "5+"  },
+  { id: "feff", label: "Manager", content: "Manager role content goes here.", openings: "4", experience: "3 to 6"  },
+  { id: "sasd", label: "Developer", content: "Developer role content goes here.", openings: "7", experience: "5 to 9"  },
+  { id: "rer", label: "Designer", content: "Designer role content goes here.", openings: "5", experience: "9+"  },
+  { id: "resi", label: "Manager", content: "Manager role content goes here.", openings: "1", experience: "15+"  },
 ];
 
 export default function Careers() {
@@ -41,14 +41,15 @@ export default function Careers() {
   }, [visibleSections]);
 
   return (
-    <div  style={{ backgroundColor: "rgb(20, 43, 70)" }} className="p-6 space-y-4">
+    <div  style={{ backgroundColor: "rgb(20, 43, 70)", minHeight: "100vh",
+    padding: "40px 70px", margin: "-15px 0px 0px", }} className="p-6 space-y-4">
        {/* Main Heading */}
   <h1 style={{ color: "#ffffff", fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>
     Career
   </h1>
 
   {/* Sub Heading */}
-  <h2 style={{ color: "#cccccc", fontSize: "35px", fontWeight: "normal", marginBottom: "30px" }}>
+  <h2 style={{ color: "#ffffff", fontSize: "35px", fontWeight: "bold", marginBottom: "30px" }}>
     Open Positions
   </h2>
       {roles.map((role) => (
@@ -74,25 +75,42 @@ export default function Careers() {
               alignItems: "center",
               justifyContent: "space-between",
               marginBottom: "15px",
+              cursor: "pointer",             // ← pointer on hover
+              transition: "background-color 0.3s, transform 0.3s", // smooth hover effect
+
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLDivElement).style.backgroundColor = "#13253e"; // slightly lighter on hover
+              (e.currentTarget as HTMLDivElement).style.transform = "scale(1.02)";    // subtle scale
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLDivElement).style.backgroundColor = "#0e1d2e"; // original color
+              (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
             }}
           >
-             <span style={{ fontWeight: "bold" }}>{role.label}</span>
+             <span className="role-name">{role.label}</span>
 
-            <div style={{ display: "flex", gap: "15px" }}>
-              <span style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                <img src="http://www.nordixone.com/img/icons/zoom-in.png" alt="Openings" width={16} height={16} />
-                {role.openings} role open
-              </span>
-              <span style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                <img src="http://www.nordixone.com/img/icons/calendar-blue.png" alt="Experience" width={16} height={16} />
-                {role.experience} years
-              </span> 
+            <div className="job-experience">
+              <div className="job-item">
+                <img src="http://www.nordixone.com/img/icons/zoom-in.png" alt="Openings" />
+                <span className="job-subitem">{role.openings} role open</span>
+              </div>
 
+              <div className="job-item">
+                <img src="http://www.nordixone.com/img/icons/calendar-blue.png" alt="Experience" />
+                <span className="job-subitem">{role.experience} years</span>
+              </div>
+
+              <img className="arrow-icon" src="http://www.nordixone.com/img/icons/arrow-white.png" alt="arrow" />
             </div>
-            <span><img src="http://www.nordixone.com/img/icons/arrow-white.png" alt="arrow" /></span> {/* Optional icon placeholder */}
+
+
           </div>
         </div>
       ))}
+      {/* Popup Component */}
+      {/* {selectedRole && <RolePopup role={selectedRole} onClose={() => setSelectedRole(null)} />} */}
+
     </div>
   );
 }

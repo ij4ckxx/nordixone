@@ -102,3 +102,48 @@ html {
 
 
 /* Srikaran css - start */
+
+.role-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 20px;
+}
+.role-icon {
+  max-height: 20px;
+  width: auto;   /* keeps aspect ratio */
+}
+.job-experience {
+  display: flex; 
+  gap: 25px;
+  align-items: center;
+  /* margin-left: auto; */
+  margin-right: 15px;
+  line-height: 1.2;   
+}
+
+.job-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 140px;  /* ✅ Set the same width for both items */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.job-item img {
+  max-height: 20px;
+  width: auto;
+}
+
+.arrow-icon {
+  max-height: 22px;
+  width: auto;
+}
+
+.job-subitem {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+

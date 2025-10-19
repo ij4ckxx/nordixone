@@ -103,7 +103,7 @@ html {
 
 /* Srikaran css - start */
 
-/* Role Tab Text */
+/* career page starts */
 .role-name {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
@@ -175,3 +175,118 @@ html {
     margin-top: 5px;
   }
 }
+/* career page ends */
+
+/* ================= About Page starts ================= */
+.about-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: rgb(10, 22, 36);
+}
+
+/* Headings */
+.about-heading {
+  font-family: Poppins, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 100% !important;
+  margin-bottom: 10px !important;
+  text-transform: uppercase !important;
+  margin-bottom: 10px;
+}
+
+.about-subheading {
+  /* font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase !important;
+  margin-bottom: 30px; */
+
+  font-family: "Druk Cyr", sans-serif !important;
+  font-size: 3rem !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  margin-bottom: 30px;
+  line-height: 44px;
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center cards on row */
+}
+
+/* Individual Card */
+.about-card {
+  background-color: #e5f9ff;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 300px; /* Flexible width, min 300px */
+  color: rgb(10, 22, 36);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+  transition: transform 0.3s;
+  /* cursor: pointer; */
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+}
+
+/* Card Image */
+.about-card-img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  margin-left: 0%;
+  margin-right: auto;
+}
+
+/* Card Title */
+.about-card-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-right: auto;
+}
+
+/* Card Summary */
+.about-card-summary {
+  /* font-family: "Poppins", sans-serif; */
+  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 26px;
+  color: rgb(10, 22, 36);
+  margin-bottom: 10px;
+}
+
+/* =================Mobile Responsive ================= */
+
+/* Tablet: 2 cards per row */
+@media (max-width: 900px) {
+  .about-card {
+    flex: 1 1 45%;
+  }
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 600px) {
+  .cards-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .about-card {
+    flex: 1 1 100%;
+  }
+}
+/* ================= About Page ends ================= */
+

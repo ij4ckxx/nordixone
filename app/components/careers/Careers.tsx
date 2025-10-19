@@ -92,12 +92,12 @@ export default function Careers() {
 
             <div className="job-experience">
               <div className="job-item">
-                <img src="http://www.nordixone.com/img/icons/zoom-in.png" alt="Openings" />
+                <img className="role-icon" src="http://www.nordixone.com/img/icons/zoom-in.png" alt="Openings" />
                 <span className="job-subitem">{role.openings} role open</span>
               </div>
 
               <div className="job-item">
-                <img src="http://www.nordixone.com/img/icons/calendar-blue.png" alt="Experience" />
+                <img className="role-icon" src="http://www.nordixone.com/img/icons/calendar-blue.png" alt="Experience" />
                 <span className="job-subitem">{role.experience} years</span>
               </div>
 

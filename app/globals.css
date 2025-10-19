@@ -103,40 +103,42 @@ html {
 
 /* Srikaran css - start */
 
+/* Role Tab Text */
 .role-name {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 20px;
 }
+
+/* Role Icons */
 .role-icon {
   max-height: 20px;
-  width: auto;   /* keeps aspect ratio */
-}
-.job-experience {
-  display: flex; 
-  gap: 25px;
-  align-items: center;
-  /* margin-left: auto; */
-  margin-right: 15px;
-  line-height: 1.2;   
+  width: auto; 
 }
 
+/* Job Experience Container */
+.job-experience {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: auto; /* push experience div to the right */
+  margin-right: 0;
+  line-height: 1.2;
+}
+
+/* Each Job Item (Openings / Experience) */
 .job-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 140px;  /* ✅ Set the same width for both items */
-  white-space: nowrap; /* Prevent text from wrapping */
+  width: 140px;       /* Fixed width ensures icons start at same spot */
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .job-item img {
   max-height: 20px;
-  width: auto;
-}
-
-.arrow-icon {
-  max-height: 22px;
   width: auto;
 }
 
@@ -147,3 +149,29 @@ html {
   line-height: 1.2;
 }
 
+/* Arrow Icon */
+.arrow-icon {
+  max-height: 22px;
+  width: auto;
+  margin-left: 15px;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 600px) {
+  .job-experience {
+    flex-direction: column;   /* Stack vertically */
+    align-items: flex-start;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .job-item {
+    width: 100%;              /* Full width */
+    gap: 8px;
+  }
+
+  .arrow-icon {
+    align-self: flex-end;     /* Arrow on right */
+    margin-top: 5px;
+  }
+}

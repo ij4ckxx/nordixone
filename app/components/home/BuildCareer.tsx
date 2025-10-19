@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import BuildCareerImage from "@/public/get-started/build-career.png";
+import Link from "next/link";
 
 const BuildCareer = () => {
   return (
@@ -14,9 +15,9 @@ const BuildCareer = () => {
                 <div>Build your career</div>
                 <div>with us</div>
               </div>
-              <button className="cursor-pointer p-[5px_12px] rounded-[30px] text-sm w-fit text-center bg-[#142b46] text-white border border-transparent hover:border-[#142b46] hover:bg-transparent hover:text-[#142b46] duration-300 ease-in-out transition-colors">
+              <Link href={'/careers'} className="cursor-pointer p-[5px_12px] rounded-[30px] text-sm w-fit text-center bg-[#142b46] text-white border border-transparent hover:border-[#142b46] hover:bg-transparent hover:text-[#142b46] duration-300 ease-in-out transition-colors">
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
           <div className="basis-1/3  align-middle aspect-[377/350]">

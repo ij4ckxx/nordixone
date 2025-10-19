@@ -4,7 +4,7 @@ import nordixoneLogo from "@/public/logo/logo-nordixone.jpg";
 
 const Header = () => {
   return (
-    <header className="flex flex-row items-center justify-between gap-5 bg-nor-secondary p-[15px_5vw]">
+    <header className="sticky top-0 z-[100] flex flex-row items-center justify-between gap-5 bg-nor-secondary p-[15px_5vw]">
       <Image
         className="w-[100px] h-[65px]"
         src={nordixoneLogo}

@@ -11,10 +11,10 @@ interface Props {
 const layout = ({ children }: Props) => {
   return (
     <>
-      <GotoTop />
       <Header />
       <main className="min-h-[60dvh] ">{children}</main>
       <Footer />
+      <GotoTop />
     </>
   );
 };

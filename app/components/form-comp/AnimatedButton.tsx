@@ -19,7 +19,7 @@ const AnimatedButton = ({
           <button
             className={`animated-button cursor-pointer p-[8px_25px] bg-[#0a1420] text-white rounded-[30px] font-semibold text-base flex justify-center items-center min-w-[150px] min-h-[45px] relative z-10  ${className}`}
           >
-            Submit
+            {children}
           </button>
         </div>
         <style jsx>

@@ -6,6 +6,7 @@ import Input from "../form-comp/Input";
 import TextArea from "../form-comp/TextArea";
 import AnimatedButton from "../form-comp/AnimatedButton";
 import { X } from "lucide-react";
+import { Dialog } from "radix-ui";
 
 const firstForm = [
   { label: "Name", placeholder: "Name", required: true, type: "text" },
@@ -48,13 +49,15 @@ const secondForm = [
 const GetStarted = () => {
   return (
     <div className="relative text-white">
-      <div className="relative get-started-comp p-[40px_20px] sm:p-[80px_40px] min-h-[70dvh]">
-        <button className="absolute -translate-x-1/2 sm:-translate-y-1/2 translate-y-0 top-0 right-0 sm:top-10 sm:right-5 bg-[#142b46] text-white rounded-[30px] border-0 text-base p-[.375rem_.75rem] flex flex-row gap-1 items-center">
-          <span>Close</span>
-          <span className="size-[14px] flex justify-center items-center border border-white rounded-full p-[2px]">
-            <X className="size-[12px] text-white" />
-          </span>
-        </button>
+      <div className="relative get-started-comp min-h-[100dvh] p-[60px_20px] sm:p-[80px_40px]">
+        <Dialog.Close asChild>
+          <button className="absolute cursor-pointer -translate-x-1/2 sm:-translate-y-1/2 translate-y-0 top-2 right-0 sm:top-10 sm:right-5 bg-[#142b46] hover:bg-nor-primary focus:bg-nor-primary text-white rounded-[30px] border-0 text-base p-[.375rem_.75rem] flex flex-row gap-1 duration-300 ease-in-out transition-colors items-center">
+            <span>Close</span>
+            <span className="size-[14px] flex justify-center items-center border border-white rounded-full p-[2px]">
+              <X className="size-[12px] text-white" />
+            </span>
+          </button>
+        </Dialog.Close>
         <div className="flex flex-col lg:flex-row lg:items-start gap-[50px]">
           <div className="basis-full text-center lg:text-left lg:basis-[40%] flex flex-col gap-[50px]">
             <div className="flex flex-col gap-[30px] font-druk tracking-[0.8px] font-bold">

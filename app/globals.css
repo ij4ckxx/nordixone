@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-Medium-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-Medium-Trial.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-MediumItalic-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-MediumItalic-Trial.otf") format("opentype");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-Bold-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-Bold-Trial.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-BoldItalic-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-BoldItalic-Trial.otf") format("opentype");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -35,7 +35,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-Heavy-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-Heavy-Trial.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -43,7 +43,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-HeavyItalic-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-HeavyItalic-Trial.otf") format("opentype");
   font-weight: 800;
   font-style: italic;
   font-display: swap;
@@ -51,7 +51,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-Super-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-Super-Trial.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -59,7 +59,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-SuperItalic-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-SuperItalic-Trial.otf") format("opentype");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -100,6 +100,11 @@ html {
   padding: 0;
 }
 
+/* Jegan css - start */
+
+.get-started-comp {
+  background: url('/get-started/home-banner.jpg') center / cover no-repeat;
+}
 
 /* Srikaran css - start */
 

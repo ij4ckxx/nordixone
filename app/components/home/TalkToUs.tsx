@@ -4,9 +4,9 @@ import React from "react";
 import RadixDialog from "../radix-ui/RadixDialog";
 import GetStarted from "../get-started/GetStarted";
 
-const TalkToUs = () => {
+const TalkToUs = ( { classes = "" }: { classes?: string }) => {
   return (
-    <div className="bg-[#e2eff4] md:p-[120px_72px] p-[100px_20px] sm:[100px_40px]">
+    <div className={`bg-[#e2eff4] md:p-[120px_72px] p-[100px_20px] sm:[100px_40px] ${classes}`}>
       <div className="flex flex-col items-center">
         <div className="sm:text-[54px] text-[44px] lg:text-[64px] uppercase font-druk tracking-[2px] leading-tight">
           Got a question?

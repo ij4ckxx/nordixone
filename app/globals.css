@@ -108,6 +108,40 @@ html {
 }
 
 /* Srikaran css - start */
+.primary-heading-hero-font {
+    font-family: "Druk Cyr", sans-serif !important;
+    font-size: 5.4rem !important;
+  }
+.about-page-banner {
+  /* border-radius: 12px 12px 0px 0px; */
+  position: relative;
+  background: url('/get-started/about-banner.jpg') center / cover no-repeat;
+}
+
+/* Dark overlay without affecting text or buttons */
+.about-page-banner::before {
+  /* border-radius: 12px 12px 0px 0px; */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.about-page-banner > * {
+  /* border-radius: 12px 12px 0px 0px; */
+  position: relative;
+  z-index: 2; /* Ensure text stays above overlay */
+}
+
+.about-page-explore {
+  /* border-radius: 12px 12px 0px 0px; */
+  background-color: rgb(71, 106, 202);
+}
+
+/* .top-radius{
+  border-radius: 12px 12px 0px 0px !important;
+} */
 
 /* career page starts */
 .role-name {
@@ -185,9 +219,9 @@ html {
 
 /* ================= About Page starts ================= */
 .about-container {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  /* padding: 40px 20px; */
+  /* max-width: 1200px; */
+  margin-top: 0px;
   background-color: #ffffff;
   color: rgb(10, 22, 36);
 }
@@ -254,6 +288,15 @@ html {
   margin-right: auto;
 }
 
+.about-card-img-two {
+  max-width: 10%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  margin-left: 0%;
+  margin-right: auto;
+}
+
 /* Card Title */
 .about-card-title {
   font-family: "Poppins", sans-serif;
@@ -294,5 +337,71 @@ html {
     flex: 1 1 100%;
   }
 }
+
+.about-section{
+    transform: translate3d(0px, 0px, 0px);
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    width: 100%;
+    height: 489.188px;
+    padding: 120px 70px;
+    background-color: rgb(10, 22, 36);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.about-section-two{
+    transform: translate3d(0px, 0px, 0px);
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    width: 100%;
+    padding: 120px 70px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.about-text{
+    color: #fff;
+    font-family: Druk Cyr, sans-serif !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    font-size: 3rem !important;
+    font-weight: 500 !important;
+    text-align: center;
+}
+
+.bg-white { background: #ffffff; color: black; }
+.bg-blue-600 { background: rgb(10, 22, 36); color: white; }
+
+/* Card Backgrounds */
+.dark-card {
+  background-color: #142b46; /* or #294184 for last one if you want variation */
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.light-card {
+  background-color: #f2f2f2;
+  color: #000;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Optional: Adjust image visibility */
+.img-invert {
+  filter: invert(1);
+}
+
+.img-normal {
+  filter: none;
+}
+
 /* ================= About Page ends ================= */
 

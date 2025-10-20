@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
+import CareersBanner from "./CareersBanner";
 
 const roles = [
   { id: "developer", label: "Developer", content: "Developer role content goes here.", openings: "1", experience: "5 to 10" },
@@ -41,27 +42,28 @@ export default function Careers() {
   }, [visibleSections]);
 
   return (
-    <div  style={{ backgroundColor: "rgb(20, 43, 70)", minHeight: "100vh",
-    padding: "40px 70px", margin: "-15px 0px 0px", }} className="p-6 space-y-4">
-       {/* Main Heading */}
-  <h1 style={{ color: "#ffffff", fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>
-    Career
-  </h1>
+     <><CareersBanner />
+     <div style={{
+      backgroundColor: "rgb(20, 43, 70)", minHeight: "100vh",
+      padding: "40px 70px", margin: "-15px 0px 0px",
+    }} className="p-6 space-y-4">
+      {/* Main Heading */}
+      <h1 style={{ color: "#ffffff", fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>
+        Career
+      </h1>
 
-  {/* Sub Heading */}
-  <h2 style={{ color: "#ffffff", fontSize: "35px", fontWeight: "bold", marginBottom: "30px" }}>
-    Open Positions
-  </h2>
+      {/* Sub Heading */}
+      <h2 style={{ color: "#ffffff", fontSize: "35px", fontWeight: "bold", marginBottom: "30px" }}>
+        Open Positions
+      </h2>
       {roles.map((role) => (
         <div
           key={role.id}
           data-id={role.id}
           ref={(el) => (refs.current[role.id] = el)}
-          className={`transition-all duration-700 transform ${
-            visibleSections.includes(role.id)
+          className={`transition-all duration-700 transform ${visibleSections.includes(role.id)
               ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-10"
-          }`}
+              : "opacity-0 translate-y-10"}`}
         >
           <div
             className="role-tab"
@@ -75,20 +77,19 @@ export default function Careers() {
               alignItems: "center",
               justifyContent: "space-between",
               marginBottom: "15px",
-              cursor: "pointer",             // ← pointer on hover
+              cursor: "pointer", // ← pointer on hover
               transition: "background-color 0.3s, transform 0.3s", // smooth hover effect
-
             }}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLDivElement).style.backgroundColor = "#13253e"; // slightly lighter on hover
-              (e.currentTarget as HTMLDivElement).style.transform = "scale(1.02)";    // subtle scale
-            }}
+              (e.currentTarget as HTMLDivElement).style.transform = "scale(1.02)"; // subtle scale
+            } }
             onMouseLeave={(e) => {
               (e.currentTarget as HTMLDivElement).style.backgroundColor = "#0e1d2e"; // original color
               (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
-            }}
+            } }
           >
-             <span className="role-name">{role.label}</span>
+            <span className="role-name">{role.label}</span>
 
             <div className="job-experience">
               <div className="job-item">
@@ -112,5 +113,6 @@ export default function Careers() {
       {/* {selectedRole && <RolePopup role={selectedRole} onClose={() => setSelectedRole(null)} />} */}
 
     </div>
+    </>
   );
 }

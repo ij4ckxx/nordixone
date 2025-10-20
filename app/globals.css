@@ -139,6 +139,31 @@ html {
   background-color: rgb(71, 106, 202);
 }
 
+.career-page-banner {
+  /* border-radius: 12px 12px 0px 0px; */
+  position: relative;
+  background: url('/get-started/career-banner.jpg') center / cover no-repeat;
+}
+/* Dark overlay without affecting text or buttons */
+.career-page-banner::before {
+  /* border-radius: 12px 12px 0px 0px; */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.career-page-banner > * {
+  /* border-radius: 12px 12px 0px 0px; */
+  position: relative;
+  z-index: 2; /* Ensure text stays above overlay */
+}
+
+.career-page-explore {
+  /* border-radius: 12px 12px 0px 0px; */
+  background-color: rgb(71, 106, 202);
+}
 /* .top-radius{
   border-radius: 12px 12px 0px 0px !important;
 } */

@@ -51,7 +51,7 @@ const GetStarted = () => {
     <div className="relative text-white">
       <div className="relative get-started-comp min-h-[100dvh] p-[60px_20px] sm:p-[80px_40px]">
         <Dialog.Close asChild>
-          <button className="absolute cursor-pointer -translate-x-1/2 sm:-translate-y-1/2 translate-y-0 top-2 right-0 sm:top-10 sm:right-5 bg-[#142b46] hover:bg-nor-primary focus:bg-nor-primary text-white rounded-[30px] border-0 text-base p-[.375rem_.75rem] flex flex-row gap-1 duration-300 ease-in-out transition-colors items-center">
+          <button className="absolute cursor-pointer -translate-x-1/2 sm:-translate-y-1/2 translate-y-0 top-2 right-0 sm:top-10 sm:right-5 bg-[#142b46] hover:bg-nor-primary  text-white rounded-[30px] border-0 text-base p-[.375rem_.75rem] flex flex-row gap-1 duration-300 ease-in-out transition-colors items-center">
             <span>Close</span>
             <span className="size-[14px] flex justify-center items-center border border-white rounded-full p-[2px]">
               <X className="size-[12px] text-white" />

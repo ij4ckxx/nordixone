@@ -97,7 +97,9 @@ html {
 /* Jegan css - start */
 
 .get-started-comp,
-.home-page-banner {
+.home-page-banner,
+.agile-management-page,
+.automation-testing-page {
   background: url("/get-started/home-banner.jpg") center / cover no-repeat;
 }
 

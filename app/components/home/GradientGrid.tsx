@@ -25,7 +25,7 @@ interface GradientGridCardProps {
 const GradientGrid = ({ productIdeas }: GradientGridProps) => {
   return (
     <div className="md:p-[120px_72px] p-[100px_20px] sm:[100px_40px] bg-nor-secondary">
-      <div className="flex flex-col gap-5 text-white">
+      <div className="flex flex-col gap-10 text-white">
         <div className="text-[40px] font-druk tracking-[1.5px] font-medium">
           WHERE IDEAS COME TO LIFE
         </div>

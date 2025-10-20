@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @font-face {
   font-family: "Druk";
   src: url("/fonts/Druk/Druk-Medium-Trial.otf") format("opentype");
@@ -65,7 +64,6 @@
   font-display: swap;
 }
 
-
 :root {
   --druk: "Druk", sans-serif;
 
@@ -73,9 +71,7 @@
   --nor-secondary: #0a1624;
   --nor-light: #f8f8f9;
   --nor-dark: #001d23;
-
 }
-
 
 /* @tailwind css start */
 @theme {
@@ -88,9 +84,7 @@
   --color-nor-light: var(--nor-light);
   --color-nor-dark: var(--nor-dark);
   --color-nor-white: var(--nor-white);
-
 }
-
 
 /* @tailwind css end */
 
@@ -104,7 +98,7 @@ html {
 
 .get-started-comp,
 .home-page-banner {
-  background: url('/get-started/home-banner.jpg') center / cover no-repeat;
+  background: url("/get-started/home-banner.jpg") center / cover no-repeat;
 }
 
 /* Srikaran css - start */

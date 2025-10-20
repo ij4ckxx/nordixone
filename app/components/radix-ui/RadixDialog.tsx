@@ -17,9 +17,13 @@ const RadixDialog = ({ trigger, children }: Props) => {
             flex justify-center items-start"
         >
           <Dialog.Title className="sr-only">Title</Dialog.Title>
-          <div className="relative w-full 
+          <div
+            className="relative w-full 
               bg-[#0a1420] rounded-[20px]
-              text-white shadow-xl">{children}</div>
+              text-white shadow-xl"
+          >
+            {children}
+          </div>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>

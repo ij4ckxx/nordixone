@@ -1,9 +1,8 @@
 @import "tailwindcss";
 
-
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-Medium-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-Medium-Trial.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -11,7 +10,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-MediumItalic-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-MediumItalic-Trial.otf") format("opentype");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -19,7 +18,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-Bold-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-Bold-Trial.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -27,7 +26,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-BoldItalic-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-BoldItalic-Trial.otf") format("opentype");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -35,7 +34,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-Heavy-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-Heavy-Trial.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -43,7 +42,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-HeavyItalic-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-HeavyItalic-Trial.otf") format("opentype");
   font-weight: 800;
   font-style: italic;
   font-display: swap;
@@ -51,7 +50,7 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-Super-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-Super-Trial.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -59,12 +58,11 @@
 
 @font-face {
   font-family: "Druk";
-  src: url("/public/fonts/Druk/Druk-SuperItalic-Trial.otf") format("opentype");
+  src: url("/fonts/Druk/Druk-SuperItalic-Trial.otf") format("opentype");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
-
 
 :root {
   --druk: "Druk", sans-serif;
@@ -73,9 +71,7 @@
   --nor-secondary: #0a1624;
   --nor-light: #f8f8f9;
   --nor-dark: #001d23;
-
 }
-
 
 /* @tailwind css start */
 @theme {
@@ -88,9 +84,7 @@
   --color-nor-light: var(--nor-light);
   --color-nor-dark: var(--nor-dark);
   --color-nor-white: var(--nor-white);
-
 }
-
 
 /* @tailwind css end */
 
@@ -99,3 +93,14 @@ html {
   margin: 0;
   padding: 0;
 }
+
+/* Jegan css - start */
+
+.get-started-comp,
+.home-page-banner,
+.agile-management-page,
+.automation-testing-page {
+  background: url("/get-started/home-banner.jpg") center / cover no-repeat;
+}
+
+/* Srikaran css - start */

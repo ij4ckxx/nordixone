@@ -4,6 +4,8 @@ import nordixoneLogo from "@/public/logo/logo-nordixone.jpg";
 import Link from "next/link";
 import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import twitterIcon from "@/public/icons/twitter-24.png";
+import RadixDialog from "../radix-ui/RadixDialog";
+import GetStarted from "../get-started/GetStarted";
 
 const companyLink = {
   title: "Company",
@@ -33,7 +35,7 @@ const Footer = () => {
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-2">
           <div className="flex flex-col gap-5 justify-between basis-full md:basis-1/3">
             <Image
-            className="w-[100px] h-[65px]"
+              className="w-[100px] h-[65px]"
               src={nordixoneLogo}
               width={100}
               height={65}
@@ -50,15 +52,30 @@ const Footer = () => {
                 {companyLink?.title}
               </div>
               <div className="flex flex-col gap-1">
-                {companyLink?.children?.map((item) => (
-                  <Link
-                    className="hover:text-nor-primary duration-300 ease-in-out focus:text-nor-primary transition-colors"
-                    href={item?.url}
-                    key={item?.label}
-                  >
-                    {item?.label}
-                  </Link>
-                ))}
+                {companyLink?.children?.map((item) => {
+                  if(item?.label?.toLowerCase() === "contact us") {
+                    return (
+                      <RadixDialog
+                        trigger={
+                          <div className="cursor-pointer hover:text-nor-primary duration-300 ease-in-out focus:text-nor-primary transition-colors">
+                            {item?.label}
+                          </div>
+                        }
+                        children={<GetStarted />}
+                        key={item?.label}
+                      />
+                    )
+                  }
+                  return (
+                    <Link
+                      className="hover:text-nor-primary duration-300 ease-in-out focus:text-nor-primary transition-colors"
+                      href={item?.url}
+                      key={item?.label}
+                    >
+                      {item?.label}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
             <div className="flex flex-col gap-4">

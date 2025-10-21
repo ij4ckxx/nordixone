@@ -9,7 +9,7 @@ interface Props {
 const RadixDialog = ({ trigger, children }: Props) => {
   return (
     <Dialog.Root>
-      <Dialog.Trigger className="w-fit self-center">{trigger}</Dialog.Trigger>
+      <Dialog.Trigger className="cursor-pointer w-fit self-center outline-none">{trigger}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Content
           className=" fixed inset-0 z-[1000]

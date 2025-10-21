@@ -1,10 +1,8 @@
-import ResourceArgumentation from '@/app/components/resource-argumentation/ResourceArgumentation'
-import React from 'react'
+import ResourceArgumentation from "@/app/components/resource-argumentation/ResourceArgumentation";
+import React from "react";
 
 const page = () => {
-  return (
-        <ResourceArgumentation />
-  )
-}
+  return <ResourceArgumentation />;
+};
 
-export default page
+export default page;

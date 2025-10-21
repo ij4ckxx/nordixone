@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import benefitIcon7 from "@/public/skyblue-images/benifit-icon7.png";
@@ -21,105 +20,107 @@ import TalkToUs from "@/app/components/home/TalkToUs";
 const processCards = [
   {
     image: benefitIcon7,
-    title: "Agile Practices",
+    title: "Compliance",
     description:
-      "In today’s dynamic business environment, agility has become a strategic necessity. Agile software development services transform project management and software development by emphasizing flexibility, collaboration, and continuous improvement.",
+      "100% Regulatory Compliance — Achieved full compliance well ahead of the regulatory deadline, avoiding potential penalties and operational risks.",
   },
   {
     image: benefitIcon8,
-    title: "Our Expertise",
+    title: "Performance",
     description:
-      "Success hinges on proactive responses to customer demands and rapid market responsiveness. Our agile development approach to enhancing business agility begins with customer-centric leadership training, shift to product-centric mindset, and fostering a startup culture with self-service DevSecOps engineering agility.",
+      "Enhanced Performance — Optimized transaction throughput, enabling the platform to handle higher volumes efficiently, even under local constraints.",
   },
   {
     image: benefitIcon9,
-    title: "Our Approach (Outcomes)",
+    title: "Quality",
     description:
-      "Empowering Customer-Centric Leadership — Considering your business needs, existing processes, and service landscape, NordixOne develops a customized list of SRE components tailored to your environment and maturity level for seamless transition to SRE practices.",
+      "Zero Defects in Production — Automated testing and pre-emptive validations ensured zero post-deployment issues, preserving system reliability and reducing operational costs.",
   },
   {
     image: benefitIcon10,
-    title: "Our Strategy (Implementation)",
+    title: "Integration",
     description:
-      "Detailed Current State Assessment. Summarizing Findings. Defining Target State Maturity. Creating Vision, Strategy, and Roadmap. Implementation. Hands-Off.",
+      "By integrating a local clearing hub, automating validation processes, and leveraging platform modernization capabilities, the solution met regulatory deadlines ahead of schedule, increased transaction throughput, and maintained service reliability under stringent compliance conditions.",
   },
 ];
+
 
 const colorCards = [
   {
     description:
-      "Customer Centricity - Placing customers at the core of product delivery.",
+      "Quicker time-to-market — Leverage digital strategies to streamline the development of innovative experiences.",
     image: careerIcon1,
     color: "bg-[#294184]",
   },
   {
     description:
-      "Lean Portfolio Management - Optimizing resource allocation with dynamic models.",
+      "Streamlined processes — Boost cloud platform integration with improved agility and security.",
     image: careerIcon2,
     color: "bg-[#f2f2f2]",
   },
   {
     description:
-      "Organizational Design - Aligning teams around value-streams for product-centricity.",
+      "Data-powered strategies — Leverage data intelligence to drive sales growth and accelerate business success.",
     image: careerIcon3,
     color: "bg-[#13afe3]",
   },
   {
     description:
-      "Agile Ways Of Working - Fostering role agility, metrics frameworks, and scalability.",
+      "Platform Modernization — Stay ahead of the curve and improve your performance by upgrading your systems without disruption to business.",
     image: careerIcon4,
     color: "bg-[#f2f2f2]",
   },
   {
     description:
-      "Leadership Agility - Developing growth mindsets and empowering servant leadership.",
+      "Assess current systems — We evaluate your existing infrastructure and pinpoint areas that need improvement. This ensures incremental delivery of outcomes with speed and scalability.",
     image: careerIcon5,
     color: "bg-[#142b46]",
   },
   {
     description:
-      "Technology Agility - Implementing DevOps practices, cloud migration, and modular architectures.",
+      "Future-Ready Data Platforms — Go beyond tech upgrades with enhanced data processing, security, and compliance.",
     image: careerIcon6,
     color: "bg-[#f2f2f2]",
   },
   {
     description:
-      "Custom Solutions - We work with you to create strategies aligned with your unique business needs and goals.",
+      "Adopt an incremental, agile approach — We start modernizing step-by-step to minimize disruption and maximize efficiency. This keeps your teams agile, ensuring you see results in weeks, not years.",
     image: careerIcon1,
     color: "bg-[#294184]",
   },
   {
     description:
-      "Data-Driven Strategies - With a data-driven approach for your business, we enable smarter decision-making and greater efficiency.",
+      "Integrate a Single Source of Truth (SSOT) — Bring all your data into one trusted system. By integrating a SSOT, you eliminate silos and enable smarter, data-driven decisions across your business.",
     image: careerIcon2,
     color: "bg-[#f2f2f2]",
   },
   {
     description:
-      "Expert-Led Collaboration - We deliver solutions driven by real-world insights and continuous client feedback.",
+      "3 P’s for Platform Modernization — People, Process & Platform.",
     image: careerIcon3,
     color: "bg-[#13afe3]",
   },
 ];
 
+
 const page = () => {
   return (
-    <div className="agile-management-page w-full">
+    <div className="bfsi-page w-full">
       <HomeBanner
         firstContent={
           <div className="text-[2rem] sm:text-[3rem] lg:text-[4rem] font-medium font-druk">
             <div className="flex flex-col gap-0 leading-[1]">
-              <span>Agile Project Management</span>
-              <span className="text-nor-primary">INSPECT & ADAPT</span>
+              <span>Banking & Financial Services</span>
+              <span className="text-nor-primary">Modernizing Platforms</span>
             </div>
           </div>
         }
         secondContent={
           <div className="text-[1.5rem] sm:text-[2rem] lg:text-[2.4rem] font-medium font-druk">
             <div className="flex flex-col gap-0 leading-[1]">
-              <span>Come Together.</span>
-              {/* <span>Work Together.</span>
-            <span>Win Together.</span> */}
+              <span>Compliance.</span>
+              {/* <span>security.</span>
+<span>customer experience.</span> */}
             </div>
           </div>
         }
@@ -129,7 +130,7 @@ const page = () => {
       <SkyBlueCard
         cardTitle={
           <div className="text-[36px] font-druk tracking-[1.5px] font-medium text-nor-secondary">
-            How Agile management works in{" "}
+            How Banking Financial Services works in{" "}
             <span className="text-nor-primary">NORDIXONE</span> ?
           </div>
         }
@@ -139,8 +140,8 @@ const page = () => {
       <ColorCard
         cardTitle={
           <div className="text-[50px] font-druk tracking-[1.5px]  font-medium text-[#294184]">
-            Partnering with <span className="text-nor-primary">Nordixone</span>{" "}
-            for Agile provides you with several key advantages:
+            Why Choose <span className="text-nor-primary">Nordixone</span>{" "}
+            for Banking Financial Services ?
           </div>
         }
         colorCards={colorCards}

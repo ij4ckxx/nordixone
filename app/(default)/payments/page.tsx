@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import benefitIcon7 from "@/public/skyblue-images/benifit-icon7.png";
@@ -21,115 +20,99 @@ import TalkToUs from "@/app/components/home/TalkToUs";
 const processCards = [
   {
     image: benefitIcon7,
-    title: "Agile Practices",
+    title: "Payments Hubs",
     description:
-      "In today’s dynamic business environment, agility has become a strategic necessity. Agile software development services transform project management and software development by emphasizing flexibility, collaboration, and continuous improvement.",
+      "Deliver modern payments with peace of mind. Accelerate your payments modernization journey with modular, scalable, and resilient payment hub solutions to enable mission-critical operations.",
   },
   {
     image: benefitIcon8,
-    title: "Our Expertise",
+    title: "Payments as a Service",
     description:
-      "Success hinges on proactive responses to customer demands and rapid market responsiveness. Our agile development approach to enhancing business agility begins with customer-centric leadership training, shift to product-centric mindset, and fostering a startup culture with self-service DevSecOps engineering agility.",
+      "Enable modern payments through cloud technology with ease. Reduce operational complexity and costs through continuous modernization with our Payments as a Service solutions.",
   },
   {
     image: benefitIcon9,
-    title: "Our Approach (Outcomes)",
+    title: "Financial Messaging",
     description:
-      "Empowering Customer-Centric Leadership — Considering your business needs, existing processes, and service landscape, NordixOne develops a customized list of SRE components tailored to your environment and maturity level for seamless transition to SRE practices.",
+      "An ecosystem of carefully curated Financial Messaging solutions. Finastra Financial Messaging covers all your messaging, market infrastructure connectivity, and payments operations needs.",
   },
   {
     image: benefitIcon10,
-    title: "Our Strategy (Implementation)",
+    title: "Advantage",
     description:
-      "Detailed Current State Assessment. Summarizing Findings. Defining Target State Maturity. Creating Vision, Strategy, and Roadmap. Implementation. Hands-Off.",
+      "Advantage is a transaction screening and monitoring solution based on real-time anti-money laundering data. It helps financial institutions screen, detect, and mitigate anti-money laundering risk.",
   },
 ];
+
 
 const colorCards = [
   {
     description:
-      "Customer Centricity - Placing customers at the core of product delivery.",
+      "Global coverage of market infrastructures – Payments and financial messages delivered on-time, safely, and securely worldwide.",
     image: careerIcon1,
     color: "bg-[#294184]",
   },
   {
     description:
-      "Lean Portfolio Management - Optimizing resource allocation with dynamic models.",
+      "True multi-entity hub solution – All payments and financial messages managed and controlled centrally to boost operational efficiency and STP rates.",
     image: careerIcon2,
     color: "bg-[#f2f2f2]",
   },
   {
     description:
-      "Organizational Design - Aligning teams around value-streams for product-centricity.",
+      "Adaptable through configuration, not customization – No more expensive and risky customizations with agility through self-service business rules.",
     image: careerIcon3,
     color: "bg-[#13afe3]",
   },
   {
     description:
-      "Agile Ways Of Working - Fostering role agility, metrics frameworks, and scalability.",
+      "Multiple deployment options – Run the solution as you want: customer or Finastra-managed cloud, SaaS, or on-premise.",
     image: careerIcon4,
     color: "bg-[#f2f2f2]",
   },
   {
     description:
-      "Leadership Agility - Developing growth mindsets and empowering servant leadership.",
+      "Modern architecture – Our payments and financial messaging solutions are built on our Global Payments Framework (GPF), enabling financial institutions to improve operational efficiency and drive future innovations.",
     image: careerIcon5,
     color: "bg-[#142b46]",
   },
   {
     description:
-      "Technology Agility - Implementing DevOps practices, cloud migration, and modular architectures.",
+      "Drive innovation and deliver increased business value at pace, with faster Time to Revenue.",
     image: careerIcon6,
     color: "bg-[#f2f2f2]",
   },
-  {
-    description:
-      "Custom Solutions - We work with you to create strategies aligned with your unique business needs and goals.",
-    image: careerIcon1,
-    color: "bg-[#294184]",
-  },
-  {
-    description:
-      "Data-Driven Strategies - With a data-driven approach for your business, we enable smarter decision-making and greater efficiency.",
-    image: careerIcon2,
-    color: "bg-[#f2f2f2]",
-  },
-  {
-    description:
-      "Expert-Led Collaboration - We deliver solutions driven by real-world insights and continuous client feedback.",
-    image: careerIcon3,
-    color: "bg-[#13afe3]",
-  },
 ];
+
 
 const page = () => {
   return (
-    <div className="agile-management-page w-full">
+    <div className="payments-page w-full">
       <HomeBanner
         firstContent={
           <div className="text-[2rem] sm:text-[3rem] lg:text-[4rem] font-medium font-druk">
             <div className="flex flex-col gap-0 leading-[1]">
-              <span>Agile Project Management</span>
-              <span className="text-nor-primary">INSPECT & ADAPT</span>
+              <span>Payments</span>
+              <span className="text-nor-primary">With Peace Of Mind</span>
             </div>
           </div>
         }
         secondContent={
           <div className="text-[1.5rem] sm:text-[2rem] lg:text-[2.4rem] font-medium font-druk">
             <div className="flex flex-col gap-0 leading-[1]">
-              <span>Come Together.</span>
-              {/* <span>Work Together.</span>
-            <span>Win Together.</span> */}
+              <span>Transforming payments.</span>
+              {/* <span>financial messaging.</span> */}
             </div>
           </div>
         }
         buttonName="Contact Us"
       />
 
+
       <SkyBlueCard
         cardTitle={
           <div className="text-[36px] font-druk tracking-[1.5px] font-medium text-nor-secondary">
-            How Agile management works in{" "}
+            How Payments works in{" "}
             <span className="text-nor-primary">NORDIXONE</span> ?
           </div>
         }
@@ -139,8 +122,8 @@ const page = () => {
       <ColorCard
         cardTitle={
           <div className="text-[50px] font-druk tracking-[1.5px]  font-medium text-[#294184]">
-            Partnering with <span className="text-nor-primary">Nordixone</span>{" "}
-            for Agile provides you with several key advantages:
+            Why Choose <span className="text-nor-primary">Nordixone</span>{" "}
+            for Payments ?
           </div>
         }
         colorCards={colorCards}

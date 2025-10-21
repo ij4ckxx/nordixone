@@ -44,7 +44,6 @@ const processCards = [
   },
 ];
 
-
 const colorCards = [
   {
     description:
@@ -83,7 +82,6 @@ const colorCards = [
     color: "bg-[#f2f2f2]",
   },
 ];
-
 
 const page = () => {
   return (

@@ -1,4 +1,4 @@
-
+import HomeBanner from "@/app/components/home/HomeBanner";
 import React from "react";
 
 import benefitIcon7 from "@/public/skyblue-images/benifit-icon7.png";
@@ -12,114 +12,100 @@ import careerIcon3 from "@/public/colorgrid-images/career-icon3.png";
 import careerIcon4 from "@/public/colorgrid-images/career-icon4.png";
 import careerIcon5 from "@/public/colorgrid-images/career-icon5.png";
 import careerIcon6 from "@/public/colorgrid-images/career-icon6.png";
-
-import HomeBanner from "@/app/components/home/HomeBanner";
 import SkyBlueCard from "@/app/components/home/SkyBlueCard";
 import ColorCard from "@/app/components/home/ColorCard";
 import TalkToUs from "@/app/components/home/TalkToUs";
 
+
 const processCards = [
   {
     image: benefitIcon7,
-    title: "Agile Practices",
+    title: "Network Automation & Management",
     description:
-      "In today’s dynamic business environment, agility has become a strategic necessity. Agile software development services transform project management and software development by emphasizing flexibility, collaboration, and continuous improvement.",
+      "Optimize network performance and reduce downtime with intelligent automation.",
   },
   {
     image: benefitIcon8,
-    title: "Our Expertise",
+    title: "Cloud & Data Center Integration",
     description:
-      "Success hinges on proactive responses to customer demands and rapid market responsiveness. Our agile development approach to enhancing business agility begins with customer-centric leadership training, shift to product-centric mindset, and fostering a startup culture with self-service DevSecOps engineering agility.",
+      "Seamlessly integrate cloud services with existing telecom infrastructure.",
   },
   {
     image: benefitIcon9,
-    title: "Our Approach (Outcomes)",
+    title: "Customer Experience Optimization",
     description:
-      "Empowering Customer-Centric Leadership — Considering your business needs, existing processes, and service landscape, NordixOne develops a customized list of SRE components tailored to your environment and maturity level for seamless transition to SRE practices.",
+      "Automate service delivery and support to enhance user satisfaction and reduce churn.",
   },
   {
     image: benefitIcon10,
-    title: "Our Strategy (Implementation)",
+    title: "Customized IT Consulting",
     description:
-      "Detailed Current State Assessment. Summarizing Findings. Defining Target State Maturity. Creating Vision, Strategy, and Roadmap. Implementation. Hands-Off.",
+      "Benefit from specialized consulting on telecom digital transformation and 5G readiness.",
   },
 ];
+
 
 const colorCards = [
   {
     description:
-      "Customer Centricity - Placing customers at the core of product delivery.",
+      "Proven Technical Expertise - Delivering robust telecom and ISP solutions with industry know-how.",
     image: careerIcon1,
     color: "bg-[#294184]",
   },
   {
     description:
-      "Lean Portfolio Management - Optimizing resource allocation with dynamic models.",
+      "Customer-Centric Innovation - Tailored strategies designed to match your business needs.",
     image: careerIcon2,
     color: "bg-[#f2f2f2]",
   },
   {
     description:
-      "Organizational Design - Aligning teams around value-streams for product-centricity.",
+      "Security & Compliance First - Ensuring data protection and regulatory adherence at every step.",
     image: careerIcon3,
     color: "bg-[#13afe3]",
   },
   {
     description:
-      "Agile Ways Of Working - Fostering role agility, metrics frameworks, and scalability.",
+      "Data-Driven Strategies - Insights and analytics to power growth and smarter decisions.",
     image: careerIcon4,
     color: "bg-[#f2f2f2]",
   },
   {
     description:
-      "Leadership Agility - Developing growth mindsets and empowering servant leadership.",
+      "Staffing Excellence - Connecting you with the right talent for sustainable business success.",
     image: careerIcon5,
     color: "bg-[#142b46]",
   },
   {
     description:
-      "Technology Agility - Implementing DevOps practices, cloud migration, and modular architectures.",
+      "Flexible Staffing Solutions - Access expert talent in network engineering, project management, IT support, and more to scale efficiently without long-term overhead.",
     image: careerIcon6,
     color: "bg-[#f2f2f2]",
   },
-  {
-    description:
-      "Custom Solutions - We work with you to create strategies aligned with your unique business needs and goals.",
-    image: careerIcon1,
-    color: "bg-[#294184]",
-  },
-  {
-    description:
-      "Data-Driven Strategies - With a data-driven approach for your business, we enable smarter decision-making and greater efficiency.",
-    image: careerIcon2,
-    color: "bg-[#f2f2f2]",
-  },
-  {
-    description:
-      "Expert-Led Collaboration - We deliver solutions driven by real-world insights and continuous client feedback.",
-    image: careerIcon3,
-    color: "bg-[#13afe3]",
-  },
 ];
+
+
+
+
 
 const page = () => {
   return (
-    <div className="agile-management-page w-full">
+    <div className="telecom-page w-full">
       <HomeBanner
         firstContent={
           <div className="text-[2rem] sm:text-[3rem] lg:text-[4rem] font-medium font-druk">
             <div className="flex flex-col gap-0 leading-[1]">
-              <span>Agile Project Management</span>
-              <span className="text-nor-primary">INSPECT & ADAPT</span>
+              <span>Telecom & ISP</span>
+              <span className="text-nor-primary">Transforming Operations</span>
             </div>
           </div>
         }
         secondContent={
           <div className="text-[1.5rem] sm:text-[2rem] lg:text-[2.4rem] font-medium font-druk">
             <div className="flex flex-col gap-0 leading-[1]">
-              <span>Come Together.</span>
-              {/* <span>Work Together.</span>
-            <span>Win Together.</span> */}
+              <span>fiber broadband.</span>
+              {/* <span>Network security & digital transformation.</span>
+              <span>5G deployment.</span> */}
             </div>
           </div>
         }
@@ -129,18 +115,19 @@ const page = () => {
       <SkyBlueCard
         cardTitle={
           <div className="text-[36px] font-druk tracking-[1.5px] font-medium text-nor-secondary">
-            How Agile management works in{" "}
+            How Telecom & ISP works in{" "}
             <span className="text-nor-primary">NORDIXONE</span> ?
           </div>
         }
         processCards={processCards}
-      />
+      />   
+
 
       <ColorCard
         cardTitle={
           <div className="text-[50px] font-druk tracking-[1.5px]  font-medium text-[#294184]">
-            Partnering with <span className="text-nor-primary">Nordixone</span>{" "}
-            for Agile provides you with several key advantages:
+            Why Choose <span className="text-nor-primary">Nordixone</span>{" "}
+            for Telecom & ISP ?
           </div>
         }
         colorCards={colorCards}
@@ -154,6 +141,7 @@ const page = () => {
           </div>
         }
       />
+
     </div>
   );
 };

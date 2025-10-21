@@ -1,5 +1,4 @@
-
-import React from "react";
+import React from 'react'
 
 import benefitIcon7 from "@/public/skyblue-images/benifit-icon7.png";
 import benefitIcon8 from "@/public/skyblue-images/benifit-icon8.png";
@@ -21,126 +20,133 @@ import TalkToUs from "@/app/components/home/TalkToUs";
 const processCards = [
   {
     image: benefitIcon7,
-    title: "Agile Practices",
+    title: "Open Banking",
     description:
-      "In today’s dynamic business environment, agility has become a strategic necessity. Agile software development services transform project management and software development by emphasizing flexibility, collaboration, and continuous improvement.",
+      "Open Banking has drawn renewed attention to APIs as a way of delivering substantial benefits to consumers — enabling financial product aggregation, spending insights, savings recommendations, and automated decision-making.",
   },
   {
     image: benefitIcon8,
-    title: "Our Expertise",
+    title: "Cloud First",
     description:
-      "Success hinges on proactive responses to customer demands and rapid market responsiveness. Our agile development approach to enhancing business agility begins with customer-centric leadership training, shift to product-centric mindset, and fostering a startup culture with self-service DevSecOps engineering agility.",
+      "Cloud banking enables high business agility and greater access to innovation without compromising on security — all within a lean, reduced-cost operating model.",
   },
   {
     image: benefitIcon9,
-    title: "Our Approach (Outcomes)",
+    title: "Platform for Innovation",
     description:
-      "Empowering Customer-Centric Leadership — Considering your business needs, existing processes, and service landscape, NordixOne develops a customized list of SRE components tailored to your environment and maturity level for seamless transition to SRE practices.",
+      "Innovating and experimenting at scale is challenging, but essential in today’s banking landscape. NordixOne provides a platform that helps banks rapidly create and commercialize new business models.",
   },
   {
     image: benefitIcon10,
-    title: "Our Strategy (Implementation)",
+    title: "Services",
     description:
-      "Detailed Current State Assessment. Summarizing Findings. Defining Target State Maturity. Creating Vision, Strategy, and Roadmap. Implementation. Hands-Off.",
+      "NordixOne Services offer guidance through every phase of a bank’s lifecycle — from launching new banks to transforming established institutions with complex legacy systems.",
   },
 ];
+
 
 const colorCards = [
   {
     description:
-      "Customer Centricity - Placing customers at the core of product delivery.",
+      "Asset-based business model – Comprehensive coverage across all major areas with deep banking functionality.",
     image: careerIcon1,
     color: "bg-[#294184]",
   },
   {
     description:
-      "Lean Portfolio Management - Optimizing resource allocation with dynamic models.",
+      "Making the complex, simple – Ensure compliance with Sharia principles while reducing operating costs and increasing automation.",
     image: careerIcon2,
     color: "bg-[#f2f2f2]",
   },
   {
     description:
-      "Organizational Design - Aligning teams around value-streams for product-centricity.",
+      "Two models, single instance – Supports both Islamic and conventional banking operations on a single system.",
     image: careerIcon3,
     color: "bg-[#13afe3]",
   },
   {
     description:
-      "Agile Ways Of Working - Fostering role agility, metrics frameworks, and scalability.",
+      "Deployment options – Supports both on-prem and cloud deployment, giving you the flexibility to choose what fits best.",
     image: careerIcon4,
     color: "bg-[#f2f2f2]",
   },
   {
     description:
-      "Leadership Agility - Developing growth mindsets and empowering servant leadership.",
+      "Rip and replace – A full-scale transformation approach to increase enterprise agility, reduce costs, and unlock new opportunities.",
     image: careerIcon5,
     color: "bg-[#142b46]",
   },
   {
     description:
-      "Technology Agility - Implementing DevOps practices, cloud migration, and modular architectures.",
+      "Symbiosis – An alternative transformation approach that delivers benefits faster while minimizing cost and risk.",
     image: careerIcon6,
     color: "bg-[#f2f2f2]",
   },
   {
     description:
-      "Custom Solutions - We work with you to create strategies aligned with your unique business needs and goals.",
+      "Treasury for Islamic banking – Comprehensive front-to-back treasury coverage for Islamic money market contracts and capital market products.",
     image: careerIcon1,
     color: "bg-[#294184]",
   },
   {
     description:
-      "Data-Driven Strategies - With a data-driven approach for your business, we enable smarter decision-making and greater efficiency.",
+      "Islamic portfolio manager – A robust investment management platform designed for Shari’ah-compliant investments.",
     image: careerIcon2,
     color: "bg-[#f2f2f2]",
   },
   {
     description:
-      "Expert-Led Collaboration - We deliver solutions driven by real-world insights and continuous client feedback.",
+      "Islamic profit distribution – Enables creation of Islamic deposit pools, linking to funding sources to calculate and distribute profits efficiently.",
     image: careerIcon3,
     color: "bg-[#13afe3]",
   },
 ];
 
+
 const page = () => {
   return (
-    <div className="agile-management-page w-full">
+    <div className='islamic-banking-page'>
       <HomeBanner
         firstContent={
           <div className="text-[2rem] sm:text-[3rem] lg:text-[4rem] font-medium font-druk">
             <div className="flex flex-col gap-0 leading-[1]">
-              <span>Agile Project Management</span>
-              <span className="text-nor-primary">INSPECT & ADAPT</span>
+              <span>
+                          Islamic Banking
+                        </span>
+              <span className="text-nor-primary">
+                          Reimagine Islamic Finance
+                        </span>
             </div>
           </div>
         }
         secondContent={
           <div className="text-[1.5rem] sm:text-[2rem] lg:text-[2.4rem] font-medium font-druk">
             <div className="flex flex-col gap-0 leading-[1]">
-              <span>Come Together.</span>
-              {/* <span>Work Together.</span>
-            <span>Win Together.</span> */}
+              <span>Deliver Customer Delight.</span>
+             
             </div>
           </div>
         }
         buttonName="Contact Us"
       />
 
+
       <SkyBlueCard
         cardTitle={
           <div className="text-[36px] font-druk tracking-[1.5px] font-medium text-nor-secondary">
-            How Agile management works in{" "}
+            How Islamic Banking works in{" "}
             <span className="text-nor-primary">NORDIXONE</span> ?
           </div>
         }
         processCards={processCards}
       />
 
+
       <ColorCard
         cardTitle={
           <div className="text-[50px] font-druk tracking-[1.5px]  font-medium text-[#294184]">
-            Partnering with <span className="text-nor-primary">Nordixone</span>{" "}
-            for Agile provides you with several key advantages:
+            Why Choose <span className="text-nor-primary">Nordixone</span>{" "}
+            for Islamic Banking ?
           </div>
         }
         colorCards={colorCards}
@@ -155,7 +161,7 @@ const page = () => {
         }
       />
     </div>
-  );
-};
+  )
+}
 
-export default page;
+export default page

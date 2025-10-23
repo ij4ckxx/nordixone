@@ -131,7 +131,7 @@ export default function About() {
       /> {/* Section 2 */}
       <CardsSectionTwo bg="bg-white text-black" /> {/* Section 3 */}
       <AboutExplore /> {/* Section 4 */}
-      <TalkToUs classes="top-radius" /> {/* Section 5 */}
+      <TalkToUs /> {/* Section 5 */}
     </div>
   );
 }

@@ -1,6 +1,17 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
 import CareersBanner from "./CareersBanner";
+import benefitIcon7 from "@/public/skyblue-images/benifit-icon7.png";
+import benefitIcon8 from "@/public/skyblue-images/benifit-icon8.png";
+import benefitIcon9 from "@/public/skyblue-images/benifit-icon9.png";
+import benefitIcon10 from "@/public/skyblue-images/benifit-icon10.png";
+import NordixoneFamily from "./NordixoneFamily";
+import CareSection from "./CareSection";
+import ApplyNowSection from "./ApplyNowSection";
+import CareersSecondBanner from "./CareersSecondBanner";
+import EmbraceWellbeingSection from "./EmbraceWellbeingSection";
+import PerksSection from "./PerksSection";
+import ApplyNowFinal from "./ApplyNowFinal";
 
 const roles = [
   { id: "developer", label: "Developer", content: "Developer role content goes here.", openings: "1", experience: "5 to 10" },
@@ -13,8 +24,40 @@ const roles = [
   { id: "rer", label: "Designer", content: "Designer role content goes here.", openings: "5", experience: "9+"  },
   { id: "resi", label: "Manager", content: "Manager role content goes here.", openings: "1", experience: "15+"  },
 ];
+const processCards = [
+  {
+    image: benefitIcon7,
+    title: "Mentoring & Coaching",
+    description:
+      "Receive personalized guidance and support to achieve your career goals and enhance your skills through one-on-one coaching sessions.",
+  },
+  {
+    image: benefitIcon8,
+    title: "Career Planning",
+    description:
+      "Benefit from comprehensive career planning services, helping you identify strengths, set goals, and navigate your career path with confidence.",
+  },
+  {
+    image: benefitIcon9,
+    title: "Holistic Development",
+    description:
+      "Engage in programs and workshops that foster leadership, communication, and emotional intelligence, ensuring personal and professional growth.",
+  },
+  {
+    image: benefitIcon10,
+    title: "Innovation Pause",
+    description:
+      "Participate in our Innovation program, encouraging creative thinking to foster continuous improvement and innovation.",
+  },
+];
 
 export default function Careers() {
+    const openPositionsRef = useRef<HTMLDivElement | null>(null); // ✅ MOVE HERE
+
+  const scrollToOpenPositions = () => {
+    openPositionsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
 
   const refs = useRef<Record<string, HTMLElement | null>>({});
@@ -42,8 +85,10 @@ export default function Careers() {
   }, [visibleSections]);
 
   return (
-     <><CareersBanner />
-     <div style={{
+     <><CareersBanner onViewRoles={scrollToOpenPositions} />
+     <NordixoneFamily processCards={processCards}  />
+     <CareSection />
+     <div ref={openPositionsRef} style={{
       backgroundColor: "rgb(20, 43, 70)", minHeight: "100vh",
       padding: "40px 70px", margin: "-15px 0px 0px",
     }} className="p-6 space-y-4">
@@ -109,10 +154,16 @@ export default function Careers() {
           </div>
         </div>
       ))}
-      {/* Popup Component */}
-      {/* {selectedRole && <RolePopup role={selectedRole} onClose={() => setSelectedRole(null)} />} */}
 
     </div>
+    <ApplyNowSection />
+    <CareersSecondBanner onViewRoles={function (): void {
+        throw new Error("Function not implemented.");
+      } }/>
+      <EmbraceWellbeingSection />
+      <PerksSection />
+      <ApplyNowFinal />
     </>
   );
 }
+

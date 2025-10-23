@@ -12,7 +12,7 @@ interface Props {
 
 const TalkToUs = ({ firstContent, radixTrigger, mailToLink }: Props) => {
   return (
-    <div className={`bg-[#e2eff4] md:p-[120px_72px] p-[100px_20px] sm:[100px_40px] ${classes}`}>
+    <div className={`bg-[#e2eff4] md:p-[120px_72px] p-[100px_20px] sm:[100px_40px]`}>
       <div className="flex flex-col items-center">
         {firstContent ? (
           firstContent

@@ -106,6 +106,16 @@ html {
     font-family: "Druk Cyr", sans-serif !important;
     font-size: 5.4rem !important;
   }
+.common-heading {
+    font-family: "Druk Cyr", sans-serif !important;
+    font-size: 3rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    font-weight: 500 !important;
+}  
+.primary-text{
+  color: rgba(19, 175, 227, 1) !important;
+}  
 .about-page-banner {
   /* border-radius: 12px 12px 0px 0px; */
   position: relative;
@@ -137,6 +147,17 @@ html {
   /* border-radius: 12px 12px 0px 0px; */
   position: relative;
   background: url('/get-started/career-banner.jpg') center / cover no-repeat;
+}
+
+.career-second-page-banner {
+  /* border-radius: 12px 12px 0px 0px; */
+  position: relative;
+  background: url('/get-started/careers-seemore-banner.png') center / cover no-repeat;
+  content: "";
+  /* position: absolute; */
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  z-index: 1;
 }
 /* Dark overlay without affecting text or buttons */
 .career-page-banner::before {
@@ -234,6 +255,315 @@ html {
     margin-top: 5px;
   }
 }
+
+/* 2nd page career */
+/* ====== SECTION BASE STYLES ====== */
+.ourvalue-sec {
+  background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden; /* prevent scroll */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.folder-bg-white {
+  background-color: #fff;
+}
+
+.overlay-section {
+  position: relative;
+  z-index: 2;
+}
+
+.embrace-sec {
+  padding: 120px 72px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ====== TEXT STYLES ====== */
+.see-heading-font {
+  font-family: "Druk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reveal-text {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card-heading {
+  font-size: 1.5rem;
+  color: #0a1420;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ====== GRID SYSTEM ====== */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.col-md-4,
+.col-md-5,
+.col-md-7 {
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.col-md-4 {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+.col-md-5 {
+  flex: 0 0 41.666%;
+  max-width: 41.666%;
+}
+
+.col-md-7 {
+  flex: 0 0 58.333%;
+  max-width: 58.333%;
+}
+
+/* ====== CARD BASE ====== */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(19, 175, 227, 0.15);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-with-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ====== CARD COLOR VARIANTS ====== */
+.card-grey {
+  background: #f4f5f7;
+}
+
+.card-light-blue {
+  background: #e6f7fd;
+}
+
+.card-naviblue {
+  background: #13afe3;
+  color: white;
+}
+
+/* ====== ICON BOX ====== */
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* ====== CUSTOM GRID ====== */
+.custom-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.first-col,
+.last-col,
+.mid-col {
+  flex: 1;
+  min-width: 280px;
+  box-sizing: border-box;
+}
+
+.card-grey .icon-box {
+    background-color: #fff;
+}
+
+.card-with-icon .icon-box {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ====== RESPONSIVE DESIGN ====== */
+
+/* --- Tablet (≤ 1024px) --- */
+@media (max-width: 1024px) {
+  .embrace-sec {
+    padding: 80px 40px;
+  }
+
+  .col-md-4,
+  .col-md-5,
+  .col-md-7 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* --- Mobile Landscape (≤ 768px) --- */
+@media (max-width: 768px) {
+  .embrace-sec {
+    padding: 60px 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .col-md-4,
+  .col-md-5,
+  .col-md-7 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 8px 0;
+  }
+
+  .custom-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .card-heading {
+    font-size: 1.2rem;
+  }
+
+  .card-content {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Mobile Portrait (≤ 480px) --- */
+@media (max-width: 480px) {
+  .embrace-sec {
+    padding: 48px 12px;
+  }
+
+  .see-heading-font {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .custom-grid {
+    gap: 16px;
+  }
+
+  .card {
+    border-radius: 12px;
+  }
+
+  .card-heading {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .card-content {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .icon-box {
+    margin-bottom: 12px;
+  }
+
+  .card-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* --- Very Small Devices (≤ 360px) --- */
+@media (max-width: 360px) {
+  .embrace-sec {
+    padding: 36px 8px;
+  }
+
+  .card-heading {
+    font-size: 1rem;
+  }
+
+  .card-content {
+    font-size: 0.8rem;
+  }
+
+  .card-icon {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.icon-box {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 75%;
+}
+.justify-content-center {
+    justify-content: center !important;
+}
+
 /* career page ends */
 
 /* ================= About Page starts ================= */

@@ -1,12 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 
-interface Props {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode | string;
   className?: string;
 }
-
 const AnimatedButton = ({
   children = "Submit",
   className,
@@ -16,7 +15,7 @@ const AnimatedButton = ({
     <>
       <div className="relative">
         <div className="animated-border-wrapper overflow-hidden  shadow-[0px_0px_12.27px_0px_rgba(19,175,227,0.4)]">
-          <button
+          <button {...props}
             className={`animated-button cursor-pointer p-[8px_25px] bg-[#0a1420] text-white rounded-[30px] font-semibold text-base flex justify-center items-center min-w-[150px] min-h-[45px] relative z-10  ${className}`}
           >
             {children}

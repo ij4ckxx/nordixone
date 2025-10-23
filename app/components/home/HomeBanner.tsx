@@ -19,14 +19,16 @@ const HomeBanner = ({
       <div className="w-full sm:w-[80%] md:w-[80%] lg:w-[70%] xl:w-[80%] pt-[3rem] px-[1rem] flex flex-col text-center gap-2 text-white uppercase">
         {firstContent && firstContent}
         {secondContent && secondContent}
-        <RadixDialog
-          trigger={
-            <div className="mt-5">
-              <AnimatedButton className="w-fit">{buttonName}</AnimatedButton>
-            </div>
-          }
-          children={<GetStarted />}
-        />
+        {buttonName !== "null" ? (
+          <RadixDialog
+            trigger={
+              <div className="mt-5">
+                <AnimatedButton className="w-fit">{buttonName}</AnimatedButton>
+              </div>
+            }
+            children={<GetStarted />}
+          />
+        ) : null}
       </div>
     </div>
   );

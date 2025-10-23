@@ -9,16 +9,21 @@ interface ColorCardProps {
 
 interface Props {
   colorCards?: ColorCardProps[];
+  cardTitle?: React.ReactNode;
 }
 
-const ColorCard = ({ colorCards }: Props) => {
+const ColorCard = ({ colorCards, cardTitle }: Props) => {
   return (
     <div className="md:p-[120px_72px] p-[100px_20px] sm:[100px_40px] bg-[#f2f2f2]">
-      <div className="flex flex-col gap-6 text-[#294184]">
-        <div className="text-[50px] font-druk tracking-[1.5px]  font-medium ">
-          Why Choose <span className="text-nor-primary">NordiXOne</span> for
-          Staffing Augmentation?
-        </div>
+      <div className="flex flex-col gap-10 text-[#294184]">
+        {cardTitle ? (
+          cardTitle
+        ) : (
+          <div className="text-[50px] font-druk tracking-[1.5px]  font-medium text-[#294184]">
+            Why Choose <span className="text-nor-primary">NordiXOne</span> for
+            Staffing Augmentation?
+          </div>
+        )}
         <div className="flex flex-row items-stretch gap-x-6 gap-y-8 flex-wrap">
           {colorCards?.map((card, index) => (
             <ColorBox

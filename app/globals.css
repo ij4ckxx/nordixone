@@ -97,7 +97,14 @@ html {
 /* Jegan css - start */
 
 .get-started-comp,
-.home-page-banner {
+.home-page-banner,
+.agile-management-page,
+.automation-testing-page,
+.telecom-page,
+.anti-money-laundrying-page,
+.payments-page,
+.bfsi-page,
+.islamic-banking-page {
   background: url("/get-started/home-banner.jpg") center / cover no-repeat;
 }
 

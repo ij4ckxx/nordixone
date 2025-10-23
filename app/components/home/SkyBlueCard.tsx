@@ -9,16 +9,21 @@ interface ProcessCardProps {
 
 interface Props {
   processCards?: ProcessCardProps[];
+  cardTitle?: React.ReactNode;
 }
 
-const SkyBlueCard = ({ processCards }: Props) => {
+const SkyBlueCard = ({ processCards, cardTitle }: Props) => {
   return (
     <div className="md:p-[120px_72px] p-[100px_20px] sm:[100px_40px] bg-white">
-      <div className="flex flex-col gap-5 text-nor-secondary">
-        <div className="text-[36px] font-druk tracking-[1.5px] font-medium ">
-          How Our Staffing Augmentation works in{" "}
-          <span className="text-nor-primary">NordiXOne</span> ?
-        </div>
+      <div className="flex flex-col gap-10 text-nor-secondary">
+        {cardTitle ? (
+          cardTitle
+        ) : (
+          <div className="text-[36px] font-druk tracking-[1.5px] font-medium text-nor-secondary">
+            How Our Staffing Augmentation works in{" "}
+            <span className="text-nor-primary">NordiXOne</span> ?
+          </div>
+        )}
 
         <div className="flex flex-row items-stretch gap-x-6 gap-y-8 flex-wrap">
           {processCards?.map((card, index) => {

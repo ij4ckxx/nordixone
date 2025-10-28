@@ -157,15 +157,15 @@ html {
 }
 
 .career-second-page-banner {
-  /* border-radius: 12px 12px 0px 0px; */
   position: relative;
-  background: url('/get-started/careers-seemore-banner.png') center / cover no-repeat;
-  content: "";
-  /* position: absolute; */
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('/get-started/careers-seemore-banner.png') center / cover no-repeat;
+  /* border-radius: 0; */
   z-index: 1;
 }
+
+
 /* Dark overlay without affecting text or buttons */
 .career-page-banner::before {
   /* border-radius: 12px 12px 0px 0px; */

@@ -12,6 +12,8 @@ import CareersSecondBanner from "./CareersSecondBanner";
 import EmbraceWellbeingSection from "./EmbraceWellbeingSection";
 import PerksSection from "./PerksSection";
 import ApplyNowFinal from "./ApplyNowFinal";
+import CareerSubmit from "./CareerSubmit";
+import RadixDialogBox from "../radix-ui/RadixDialogBox";
 
 const roles = [
   { id: "developer", label: "Developer", content: "Developer role content goes here.", openings: "1", experience: "5 to 10" },
@@ -52,13 +54,19 @@ const processCards = [
 ];
 
 export default function Careers() {
-    const openPositionsRef = useRef<HTMLDivElement | null>(null); // ✅ MOVE HERE
+  const [showMore, setShowMore] = useState(false);
+  const openPositionsRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToOpenPositions = () => {
     openPositionsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-
-  const [visibleSections, setVisibleSections] = useState<string[]>([]);
+  useEffect(() => {
+    if (showMore) {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+  }, [showMore]);
+ const [visibleSections, setVisibleSections] = useState<string[]>([]);
+const [selectedRole, setSelectedRole] = useState<string | null>(null);
 
   const refs = useRef<Record<string, HTMLElement | null>>({});
 
@@ -83,15 +91,80 @@ export default function Careers() {
 
     return () => observer.disconnect();
   }, [visibleSections]);
-
+  // 🧠 Pass the toggle function to CareSection so its "View More" button triggers this
   return (
-     <><CareersBanner onViewRoles={scrollToOpenPositions} />
-     <NordixoneFamily processCards={processCards}  />
-     <CareSection />
-     <div ref={openPositionsRef} style={{
+    <>
+      {/* === FIRST 4 COMPONENTS === */}
+      {!showMore && (
+        <>
+        {/* <CareerSubmit /> */}
+          <CareersBanner onViewRoles={scrollToOpenPositions} />
+          <NordixoneFamily processCards={processCards} />
+          {/* Pass the function here */}
+          <CareSection onViewMore={() => setShowMore(true)} />
+
+          {/* Open Positions Section */}
+          {/* <div
+            ref={openPositionsRef}
+            className="p-6 space-y-4"
+            style={{
+              backgroundColor: "rgb(20, 43, 70)",
+              minHeight: "100vh",
+              padding: "40px 70px",
+              margin: "-15px 0px 0px",
+            }}
+          >
+            <h1
+              style={{
+                color: "#ffffff",
+                fontSize: "20px",
+                fontWeight: "bold",
+                marginBottom: "10px",
+              }}
+            >
+              Career
+            </h1>
+            <h2
+              style={{
+                color: "#ffffff",
+                fontSize: "35px",
+                fontWeight: "bold",
+                marginBottom: "30px",
+              }}
+            >
+              Open Positions
+            </h2>
+
+            {roles.map((role) => (
+              <div
+                key={role.id}
+                className="bg-[#0e1d2e] text-white p-4 rounded-md mb-4 hover:bg-[#13253e] transition"
+              >
+            <span className="role-name">{role.label}</span>
+
+            <div className="job-experience">
+              <div className="job-item">
+                <img className="role-icon" src="http://www.nordixone.com/img/icons/zoom-in.png" alt="Openings" />
+                <span className="job-subitem">{role.openings} role open</span>
+                </div>
+
+              <div className="job-item">
+                <img className="role-icon" src="http://www.nordixone.com/img/icons/calendar-blue.png" alt="Experience" />
+                <span className="job-subitem">{role.experience} years</span>
+              </div>
+
+              <img className="arrow-icon" src="http://www.nordixone.com/img/icons/arrow-white.png" alt="arrow" />
+            </div>
+
+
+          </div>
+        
+            ))}
+          </div> */}
+          <div ref={openPositionsRef} style={{
       backgroundColor: "rgb(20, 43, 70)", minHeight: "100vh",
       padding: "40px 70px", margin: "-15px 0px 0px",
-    }} className="p-6 space-y-4">
+    }} className="p-2 flex flex-col space-y-4 w-full">
       {/* Main Heading */}
       <h1 style={{ color: "#ffffff", fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>
         Career
@@ -102,16 +175,19 @@ export default function Careers() {
         Open Positions
       </h2>
       {roles.map((role) => (
-        <div
+          <RadixDialogBox
+    key={role.id}
+    trigger={
+      <div
           key={role.id}
           data-id={role.id}
           ref={(el) => (refs.current[role.id] = el)}
           className={`transition-all duration-700 transform ${visibleSections.includes(role.id)
               ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-10"}`}
+              : "opacity-0 translate-y-10"} w-full`}
         >
           <div
-            className="role-tab"
+            className="role-tab w-full"
             style={{
               backgroundColor: "#0e1d2e",
               borderColor: "#0e1d2e",
@@ -153,17 +229,38 @@ export default function Careers() {
 
           </div>
         </div>
-      ))}
+    }
+  >
+    {/* Modal Content */}
+    <CareerSubmit roleTitle={role.label} />
+  </RadixDialogBox>
+  ))}
 
-    </div>
-    <ApplyNowSection />
-    <CareersSecondBanner onViewRoles={function (): void {
-        throw new Error("Function not implemented.");
-      } }/>
-      <EmbraceWellbeingSection />
-      <PerksSection />
-      <ApplyNowFinal />
+          </div>
+          
+          <ApplyNowSection />
+        </>
+      )}
+
+      {/* === LAST COMPONENTS === */}
+      {showMore && (
+        <>
+          <CareersSecondBanner onViewRoles={() => {}} />
+          <EmbraceWellbeingSection />
+          <PerksSection />
+          <ApplyNowFinal />
+
+          {/* View Less Button */}
+          <div className="text-center my-10">
+            <button
+              onClick={() => setShowMore(false)}
+              className="px-6 py-3 bg-gray-700 text-white rounded-md hover:bg-gray-800 transition"
+            >
+              View Less
+            </button>
+          </div>
+        </>
+      )}
     </>
   );
 }
-

@@ -91,6 +91,13 @@ const [selectedRole, setSelectedRole] = useState<string | null>(null);
 
     return () => observer.disconnect();
   }, [visibleSections]);
+  const handleViewLessAndScroll = () => {
+  setShowMore(false);
+  setTimeout(() => {
+    openPositionsRef.current?.scrollIntoView({ behavior: "auto" });
+  }, 300); // small delay so that the section becomes visible before scroll
+};
+
   // 🧠 Pass the toggle function to CareSection so its "View More" button triggers this
   return (
     <>
@@ -248,17 +255,18 @@ const [selectedRole, setSelectedRole] = useState<string | null>(null);
           <CareersSecondBanner onViewRoles={() => {}} />
           <EmbraceWellbeingSection />
           <PerksSection />
-          <ApplyNowFinal />
+          <ApplyNowFinal onApplyNow={handleViewLessAndScroll} />
 
           {/* View Less Button */}
-          <div className="text-center my-10">
+          {/* <div className="text-center my-10">
             <button
               onClick={() => setShowMore(false)}
               className="px-6 py-3 bg-gray-700 text-white rounded-md hover:bg-gray-800 transition"
             >
               View Less
             </button>
-          </div>
+          </div> */}
+
         </>
       )}
     </>

@@ -34,13 +34,15 @@ const Footer = () => {
         {/* first */}
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-2">
           <div className="flex flex-col gap-5 justify-between basis-full md:basis-1/3">
-            <Image
-              className="w-[100px] h-[65px]"
-              src={nordixoneLogo}
-              width={100}
-              height={65}
-              alt="nordixone-logo"
-            />
+            <Link href={"/"}>
+              <Image
+                className="w-[100px] h-[65px]"
+                src={nordixoneLogo}
+                width={100}
+                height={65}
+                alt="nordixone-logo"
+              />
+            </Link>
             <div className="w-full md:w-[95%] lg:w-[80%]">
               We help TRANSFORM organization's operations through Enterprise
               Applications
@@ -53,7 +55,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-col gap-1">
                 {companyLink?.children?.map((item) => {
-                  if(item?.label?.toLowerCase() === "contact us") {
+                  if (item?.label?.toLowerCase() === "contact us") {
                     return (
                       <RadixDialog
                         trigger={
@@ -64,7 +66,7 @@ const Footer = () => {
                         children={<GetStarted />}
                         key={item?.label}
                       />
-                    )
+                    );
                   }
                   return (
                     <Link

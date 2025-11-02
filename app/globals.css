@@ -109,3 +109,655 @@ html {
 }
 
 /* Srikaran css - start */
+.primary-heading-hero-font {
+    font-family: "Druk Cyr", sans-serif !important;
+    font-size: 5.4rem !important;
+  }
+.common-heading {
+    font-family: "Druk Cyr", sans-serif !important;
+    font-size: 3rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    font-weight: 500 !important;
+}  
+.primary-text{
+  color: rgba(19, 175, 227, 1) !important;
+}  
+.about-page-banner {
+  /* border-radius: 12px 12px 0px 0px; */
+  position: relative;
+  background: url('/get-started/about-banner.jpg') center / cover no-repeat;
+}
+
+/* Dark overlay without affecting text or buttons */
+.about-page-banner::before {
+  /* border-radius: 12px 12px 0px 0px; */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.about-page-banner > * {
+  /* border-radius: 12px 12px 0px 0px; */
+  position: relative;
+  z-index: 2; /* Ensure text stays above overlay */
+}
+
+.about-page-explore {
+  /* border-radius: 12px 12px 0px 0px; */
+  background-color: rgb(71, 106, 202);
+}
+
+.career-page-banner {
+  /* border-radius: 12px 12px 0px 0px; */
+  position: relative;
+  background: url('/get-started/career-banner.jpg') center / cover no-repeat;
+}
+
+.career-second-page-banner {
+  position: relative;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('/get-started/careers-seemore-banner.png') center / cover no-repeat;
+  /* border-radius: 0; */
+  z-index: 1;
+}
+
+
+/* Dark overlay without affecting text or buttons */
+.career-page-banner::before {
+  /* border-radius: 12px 12px 0px 0px; */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.career-page-banner > * {
+  /* border-radius: 12px 12px 0px 0px; */
+  position: relative;
+  z-index: 2; /* Ensure text stays above overlay */
+}
+
+.career-page-explore {
+  /* border-radius: 12px 12px 0px 0px; */
+  background-color: rgb(71, 106, 202);
+}
+/* .top-radius{
+  border-radius: 12px 12px 0px 0px !important;
+} */
+
+/* career page starts */
+.role-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+/* Role Icons */
+.role-icon {
+  max-height: 20px;
+  width: auto; 
+}
+
+/* Job Experience Container */
+.job-experience {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: auto; /* push experience div to the right */
+  margin-right: 0;
+  line-height: 1.2;
+}
+
+/* Each Job Item (Openings / Experience) */
+.job-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 140px;       /* Fixed width ensures icons start at same spot */
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.job-item img {
+  max-height: 20px;
+  width: auto;
+}
+
+.job-subitem {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Arrow Icon */
+.arrow-icon {
+  max-height: 22px;
+  width: auto;
+  margin-left: 15px;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 600px) {
+  .job-experience {
+    flex-direction: column;   /* Stack vertically */
+    align-items: flex-start;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .job-item {
+    width: 100%;              /* Full width */
+    gap: 8px;
+  }
+
+  .arrow-icon {
+    align-self: flex-end;     /* Arrow on right */
+    margin-top: 5px;
+  }
+}
+
+/* 2nd page career */
+/* ====== SECTION BASE STYLES ====== */
+.ourvalue-sec {
+  background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden; /* prevent scroll */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.folder-bg-white {
+  background-color: #fff;
+}
+
+.overlay-section {
+  position: relative;
+  z-index: 2;
+}
+
+.embrace-sec {
+  padding: 120px 72px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ====== TEXT STYLES ====== */
+.see-heading-font {
+  font-family: "Druk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reveal-text {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card-heading {
+  font-size: 1.5rem;
+  color: #0a1420;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ====== GRID SYSTEM ====== */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.col-md-4,
+.col-md-5,
+.col-md-7 {
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.col-md-4 {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+.col-md-5 {
+  flex: 0 0 41.666%;
+  max-width: 41.666%;
+}
+
+.col-md-7 {
+  flex: 0 0 58.333%;
+  max-width: 58.333%;
+}
+
+/* ====== CARD BASE ====== */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(19, 175, 227, 0.15);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-with-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ====== CARD COLOR VARIANTS ====== */
+.card-grey {
+  background: #f4f5f7;
+}
+
+.card-light-blue {
+  background: #e6f7fd;
+}
+
+.card-naviblue {
+  background: #13afe3;
+  color: white;
+}
+
+/* ====== ICON BOX ====== */
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* ====== CUSTOM GRID ====== */
+.custom-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.first-col,
+.last-col,
+.mid-col {
+  flex: 1;
+  min-width: 280px;
+  box-sizing: border-box;
+}
+
+.card-grey .icon-box {
+    background-color: #fff;
+}
+
+.card-with-icon .icon-box {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ====== RESPONSIVE DESIGN ====== */
+
+/* --- Tablet (≤ 1024px) --- */
+@media (max-width: 1024px) {
+  .embrace-sec {
+    padding: 80px 40px;
+  }
+
+  .col-md-4,
+  .col-md-5,
+  .col-md-7 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* --- Mobile Landscape (≤ 768px) --- */
+@media (max-width: 768px) {
+  .embrace-sec {
+    padding: 60px 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .col-md-4,
+  .col-md-5,
+  .col-md-7 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 8px 0;
+  }
+
+  .custom-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .card-heading {
+    font-size: 1.2rem;
+  }
+
+  .card-content {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Mobile Portrait (≤ 480px) --- */
+@media (max-width: 480px) {
+  .embrace-sec {
+    padding: 48px 12px;
+  }
+
+  .see-heading-font {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .custom-grid {
+    gap: 16px;
+  }
+
+  .card {
+    border-radius: 12px;
+  }
+
+  .card-heading {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .card-content {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .icon-box {
+    margin-bottom: 12px;
+  }
+
+  .card-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* --- Very Small Devices (≤ 360px) --- */
+@media (max-width: 360px) {
+  .embrace-sec {
+    padding: 36px 8px;
+  }
+
+  .card-heading {
+    font-size: 1rem;
+  }
+
+  .card-content {
+    font-size: 0.8rem;
+  }
+
+  .card-icon {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.icon-box {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 75%;
+}
+.justify-content-center {
+    justify-content: center !important;
+}
+
+/* career page ends */
+
+/* ================= About Page starts ================= */
+.about-container {
+  /* padding: 40px 20px; */
+  /* max-width: 1200px; */
+  margin-top: 0px;
+  background-color: #ffffff;
+  color: rgb(10, 22, 36);
+}
+
+/* Headings */
+.about-heading {
+  font-family: Poppins, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 100% !important;
+  margin-bottom: 10px !important;
+  text-transform: uppercase !important;
+  margin-bottom: 10px;
+}
+
+.about-subheading {
+  /* font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase !important;
+  margin-bottom: 30px; */
+
+  font-family: "Druk Cyr", sans-serif !important;
+  font-size: 3rem !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  margin-bottom: 30px;
+  line-height: 44px;
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center cards on row */
+}
+
+/* Individual Card */
+.about-card {
+  background-color: #e5f9ff;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 300px; /* Flexible width, min 300px */
+  color: rgb(10, 22, 36);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+  transition: transform 0.3s;
+  /* cursor: pointer; */
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+}
+
+/* Card Image */
+.about-card-img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  margin-left: 0%;
+  margin-right: auto;
+}
+
+.about-card-img-two {
+  max-width: 10%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  margin-left: 0%;
+  margin-right: auto;
+}
+
+/* Card Title */
+.about-card-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-right: auto;
+}
+
+/* Card Summary */
+.about-card-summary {
+  /* font-family: "Poppins", sans-serif; */
+  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 26px;
+  color: rgb(10, 22, 36);
+  margin-bottom: 10px;
+}
+
+/* =================Mobile Responsive ================= */
+
+/* Tablet: 2 cards per row */
+@media (max-width: 900px) {
+  .about-card {
+    flex: 1 1 45%;
+  }
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 600px) {
+  .cards-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .about-card {
+    flex: 1 1 100%;
+  }
+}
+
+.about-section{
+    transform: translate3d(0px, 0px, 0px);
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    width: 100%;
+    height: 489.188px;
+    padding: 120px 70px;
+    background-color: rgb(10, 22, 36);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.about-section-two{
+    transform: translate3d(0px, 0px, 0px);
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    width: 100%;
+    padding: 120px 70px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.about-text{
+    color: #fff;
+    font-family: Druk Cyr, sans-serif !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    font-size: 3rem !important;
+    font-weight: 500 !important;
+    text-align: center;
+}
+
+.bg-white { background: #ffffff; color: black; }
+.bg-blue-600 { background: rgb(10, 22, 36); color: white; }
+
+/* Card Backgrounds */
+.dark-card {
+  background-color: #142b46; /* or #294184 for last one if you want variation */
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.light-card {
+  background-color: #f2f2f2;
+  color: #000;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Optional: Adjust image visibility */
+.img-invert {
+  filter: invert(1);
+}
+
+.img-normal {
+  filter: none;
+}
+
+/* ================= About Page ends ================= */
+
